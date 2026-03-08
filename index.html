@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!-- Gradient Navigation Bar -->
+        <nav class="navbar">
+            <div class="navbar-content">
+                <a href="#" class="navbar-brand">🔐 PassGen Pro</a>
+                <ul class="navbar-nav">
+                    <li><a href="#generator">Generator</a></li>
+                    <li><a href="#security">Security</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content" id="generator">
+            <div class="container">
+                <!-- Theme Toggle -->
+                <div class="theme-toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="themeToggle">
+                        <span class="slider-round"></span>
+                    </label>
+                    <span id="themeLabel">🌙</span>
+                </div>
+
+                <h1>Password Generator</h1>
+
+                <!-- Display Container -->
+               <div class="display-container">
+  <div class="input-wrapper">
+    <input type="password" readonly placeholder="Password" class="display" data-passwordDisplay />
+    <span class="icon toggle-visibility" id="togglePassword">👁️</span>
+    <span class="icon copyBtn" data-copy>📋</span>
+  </div>
+  <span class="copyMsg" data-copyMsg></span>
+</div>
+
+
+                <!-- Password Strength Indicator -->
+                <div class="indicator-wrapper">
+                    <div class="indicator" data-indicator></div>
+                    <span class="txt">Password Strength</span>
+                </div>
+
+                <!-- Password Length -->
+                <div class="input-container">
+                    <label for="slider">Password Length</label>
+                    <div class="slider-wrapper">
+                        <input type="range" min="4" max="40" class="slider" id="slider" data-lengthSlider>
+                        <span data-lengthNumber>10</span>
+                    </div>
+                </div>
+
+                <!-- Checkboxes -->
+                <div class="check">
+                    <input type="checkbox" id="uppercase">
+                    <label for="uppercase">Includes Uppercase Letters</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" id="lowercase">
+                    <label for="lowercase">Includes Lowercase Letters</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" id="numbers">
+                    <label for="numbers">Includes Numbers</label>
+                </div>
+
+                <div class="check">
+                    <input type="checkbox" id="symbols">
+                    <label for="symbols">Includes Symbols</label>
+                </div>
+
+                <!-- Generate Button -->
+                <button class="genrateBtn">Generate Password</button>
+            </div>
+        </main>
+
+        <!-- Gradient Footer with Social Icons -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-brand">🔐 PassGen Pro</div>
+                <p class="footer-description">
+                    Your trusted companion for generating secure, unique passwords.
+                    Protect your digital life with strong authentication.
+                </p>
+
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                    <a href="#" class="social-icon facebook" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon twitter" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon instagram" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon linkedin" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon github" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-icon youtube" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2025 PassGen Pro. All rights reserved. | Built with ❤️ for your security</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
